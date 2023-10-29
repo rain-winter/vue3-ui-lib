@@ -29,8 +29,17 @@ export default {
           }
         },
         legend: {
+          showCheckbox: true,
           align: 'left',
-          backgroundColor: 'red'
+          backgroundColor: 'red',
+          itemStyle: {
+            color: '#fff'
+          },
+          itemCheckboxStyle: {
+            width: '40px',
+            height: '40px'
+          },
+          padding: 0
         },
         // yAxis: [
         //   {
@@ -79,3 +88,9 @@ export default {
     <highcharts :options="chartOptions" />
   </main>
 </template>
+<style>
+.highcharts-point {
+  width: 20px;
+  height: 20px;
+}
+</style>

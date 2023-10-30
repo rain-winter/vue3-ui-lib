@@ -15,10 +15,11 @@ onMounted(() => {
     <Button
       ref="buttonRef"
       type="primary"
-      plain
-      >Test Button</Button
+      status="success"
+      >点击</Button
     >
   </div>
+  <div style="color: var(--color-danger-light-4); font-size: 18px">123</div>
 </template>
 
 <style scoped>

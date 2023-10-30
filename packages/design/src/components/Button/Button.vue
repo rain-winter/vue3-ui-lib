@@ -2,13 +2,14 @@
   <button
     ref="_ref"
     :class="{
-      [`button--${type}`]: type,
-      [`button--${size}`]: size,
-      'is-plain': plain,
-      'is-round': round,
-      'is-circle': circle,
-      'is-disabled': disabled
+      [`arco-btn-${type}`]: type,
+      [`arco-btn-size-${size}`]: size,
+      [`arco-btn-status-${status}`]: status,
+      'arco-btn-shape-round': round,
+      'arco-btn-shape-circle': circle,
+      'arco-btn-shape-disabled': disabled
     }"
+    class="arco-btn"
     :disabled="disabled"
     :autofocus="autofocus"
     :type="nativeType"
@@ -24,7 +25,9 @@ defineOptions({
   name: 'vButton'
 })
 withDefaults(defineProps<ButtonProps>(), {
-  nativeType: 'button'
+  nativeType: 'button',
+  size: 'medium',
+  type: 'secondary'
 })
 
 const _ref = ref<HTMLButtonElement>()

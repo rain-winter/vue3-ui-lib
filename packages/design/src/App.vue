@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { ButtonInstance } from '@/components/Button/types'
-import { onMounted, ref } from 'vue'
-import Button from './components/Button/Button.vue'
+import type { ButtonInstance } from '@/components/Button/types';
+import { onMounted, ref } from 'vue';
+import Button from './components/Button/Button.vue';
 const buttonRef = ref<ButtonInstance | null>(null)
 onMounted(() => {
   if (buttonRef.value) {
@@ -19,7 +19,16 @@ onMounted(() => {
       >点击</Button
     >
   </div>
-  <div style="color: var(--color-danger-light-4); font-size: 18px">123</div>
+  <div
+    class="rounded-full"
+    style="color: var(--color-danger-light-4); font-size: 18px"
+  >
+    123
+  </div>
+  <div
+    class="rounded-full"
+    style="width: 40px; height: 40px; background-color: aqua"
+  ></div>
 </template>
 
 <style scoped>

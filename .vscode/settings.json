@@ -1,7 +1,6 @@
 {
   "editor.codeActionsOnSave": {
-    // 整理 import 语句
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   },
   "eslint.validate": ["javascript", "javascriptreact", "vue"]
 }

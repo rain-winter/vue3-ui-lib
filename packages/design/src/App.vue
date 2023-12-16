@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import type { ButtonInstance } from '@/components/Button/types';
-import { onMounted, ref } from 'vue';
-import Button from './components/Button/Button.vue';
+import type { ButtonInstance } from '@/components/Button/types'
+import { onMounted, ref } from 'vue'
+import Button from './components/Button/Button.vue'
+import Collapse from './components/Collapse/Collapse.vue'
+import CollapseItem from './components/Collapse/CollapseItem.vue'
 const buttonRef = ref<ButtonInstance | null>(null)
 onMounted(() => {
   if (buttonRef.value) {
-    console.log(buttonRef.value.ref)
+    // console.log(buttonRef.value.ref)
   }
 })
 </script>
@@ -23,12 +25,25 @@ onMounted(() => {
     class="rounded-full"
     style="color: var(--color-danger-light-4); font-size: 18px"
   >
-    123
+    color
   </div>
-  <div
-    class="rounded-full"
-    style="width: 40px; height: 40px; background-color: aqua"
-  ></div>
+  <hr />
+  <h2 class="text-lg">手风琴</h2>
+  <Collapse>
+    <CollapseItem name="a">
+      <template #title>
+        <h1>nice title</h1>
+      </template>
+      <h1>headline title</h1>
+      <div>this is conent a a a</div>
+    </CollapseItem>
+    <CollapseItem
+      name="b"
+      title="nice titl b itenb b"
+    >
+      <div>this is bb test</div>
+    </CollapseItem>
+  </Collapse>
 </template>
 
 <style scoped>
